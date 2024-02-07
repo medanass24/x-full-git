@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Page</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('/Users/anass/Desktop/clothes/hand-painted-watercolor-pastel-sky-background_23-2148902771.avif'); 
+  background-size: cover;
+  background-position: center;
+}
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre portée */
+}
+
+.header-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease; /* Ajoute une animation d'entrée */
+}
+.header-title:hover {
+  color: #ffd700; /* Changement de couleur au survol */
+  transition: color 0.3s; /* Ajout d'une transition fluide */
+}
+
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+nav {
+  background-color: #444;
+ 
+      color: #fff;
+      text-align: center;
+      padding: 0.5em 0;
+      transition: background-color 0.3s;
+      
+    
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #ffd700; /* Couleur du texte au survol */
+}
+
+nav a:hover {
+  background-color: #333; /* Couleur de fond au survol */
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+.product {
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.1);
+}
+
+.product {
+  margin: 20px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.price {
+  color: #333;
+  font-weight: bold;
+}
+
+.animated-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.animated-button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-section {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+
+.animated-button.clicked {
+  
+  background-color: #ffd700;
+  color: #d70b0b;
+}
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.animated-button.clicked {
+  /* Ajoutez ici les styles que vous souhaitez appliquer lorsque le bouton est cliqué */
+  animation: bounce 0.5s;
+}
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  
+
+
+  <header class="header">
+    <h1 class="header-title">Cozy Hood Emporium</h1>
+  </header>
+  
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  
+  <section>
+    <div class="product">
+      <img src="Z9.jpeg" alt="Hoodie">
+      <h2>Trendy Shirt</h2>
+      <p class="price">$220.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+    <div class="product">
+      <img src="Z11.webp" alt="Hoodie">
+      <h2>Stylish Jeans</h2>
+      <p class="price">$300.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+    <div class="product">
+      <img src="Z12.webp" alt="Hoodie">
+      <h2>Elegant Dress</h2>
+      <p class="price">$450.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+    <div class="product">
+      <img src="Z13.jpeg" alt="Hoodie">
+      <h2>Comfortable Sneakers</h2>
+      <p class="price">$250.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+    <div class="product">
+      <img src="Z10.jpeg" alt="Hoodie">
+      <h2>Elegant Dress</h2>
+      <p class="price">$450.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+
+    
+
+    <div class="product">
+      <img src="Z7.jpeg" alt="Hoodie">
+      <h2>Elegant Dress</h2>
+      <p class="price">$450.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+
+    <div class="product">
+      <img src="Z8.webp" alt="Hoodie">
+      <h2>Elegant Dress</h2>
+      <p class="price">$450.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+
+    <div class="product">
+      <img src="Z4.webp" alt="Hoodie">
+      <h2>Elegant Dress</h2>
+      <p class="price">$450.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+
+    <div class="product">
+      <img src="Z5.jpeg" alt="Hoodie">
+      <h2>Elegant Dress</h2>
+      <p class="price">$450.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+
+    <div class="product">
+      <img src="Z6.jpeg" alt="Hoodie">
+      <h2>Elegant Dress</h2>
+      <p class="price">$450.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+
+    <div class="product">
+      <img src="Z2.webp" alt="Hoodie">
+      <h2>Elegant Dress</h2>
+      <p class="price">$450.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+
+    <div class="product">
+      <img src="Z3.webp" alt="Hoodie">
+      <h2>Elegant Dress</h2>
+      <p class="price">$450.00</p>
+      <button class="animated-button" onclick="addToCart(this)">Add to Cart</button>
+
+    </div>
+
+
+    
+    
+
+
+    <footer>  
+      <div class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+          <input type="email" placeholder="Your Email">
+          <input type="password" placeholder="Your password">
+          <textarea placeholder="Your Message"></textarea>
+          <button type="submit">Submit</button>
+        </div>
+      </div>  
+      
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <p>Phone: +212649592644</p>
+      </div>
+      
+      
+    <script>         
+      function openModal(title, imageSrc, description) 
+      { document.getElementById('modalTitle').innerText = title; 
+      document.getElementById('modalImage').src = imageSrc;
+      document.getElementById('modalDescription').innerText = description;              
+      document.getElementById('myModal').style.display = 'flex';         
+        }          
+      function closeModal() 
+      {document.getElementById('myModal').style.display = 'none';
+        }     
+    </script>
+
+    
+
+  </section>
+
+</body>
+</html>
